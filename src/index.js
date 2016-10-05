@@ -1,8 +1,18 @@
-function verifyEmail(input) {
-  var pattern = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
-  return pattern.test(input);
-}
+const camel = require('./camelCase');
+
+var convertKeysToCamelCase = (obj) => {
+
+  Object.keys(obj).forEach((key) => {
+    var k = camel(key);
+
+    if (k !== key) {
+      obj[k] = obj[key];
+      delete obj[key];
+    }
+  });
+  return obj;
+};
 
 module.exports = {
-  verify: verifyEmail
-}
+  convert: convertKeysToCamelCase
+};
