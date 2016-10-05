@@ -1,7 +1,7 @@
 {
-  "name": "verifyemail",
+  "name": "object-to-camel",
   "version": "1.0.0",
-  "description": "Verify email address",
+  "description": "Convert object properties to camel case",
   "main": "src/index.js",
   "scripts": {
     "pretest": "./node_modules/.bin/eslint src/index.js",
