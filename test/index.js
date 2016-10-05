@@ -12,7 +12,7 @@ describe('Verify Email Test Case', function() {
     _Field_NameTest_7_: 'test7',
     _Field_NameTest_8__: 'test8',
     _field_NameTest_9: 'test9',
-    _FFieldNamTest_10: 'test10',
+    _FFieldNameTest_10: 'test10',
     _Field_Name_Test_11: 'test11',
     fieldNameTest12: 'test12'
   };
@@ -56,7 +56,7 @@ describe('Verify Email Test Case', function() {
   });  
 
   it('Should be true', function() {
-    expect(camelHelper.convert(object).fFieldNameTest10).to.be.equal('test10');
+    expect(camelHelper.convert(object).ffieldNameTest10).to.be.equal('test10');
   });  
   
   it('Should be true', function() {
